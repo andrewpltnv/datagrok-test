@@ -1,14 +1,3 @@
-class NodeClass {
-	constructor(
-		public value: number,
-		public left?: NodeClass,
-		public right?: NodeClass,
-	) {}
-}
+import { n1, sumBinaryTree } from "./src/first/index.js";
 
-const tree: NodeClass = new NodeClass(
-	12,
-	new NodeClass(12, null, new NodeClass(10)),
-);
-
-console.log({ tree });
+sumBinaryTree(n1);
