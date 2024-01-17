@@ -38,3 +38,11 @@ const rect1 = new RectClass([-10, 10.3], [-5, 15]);
 const rect2 = new RectClass([0, 15], [-3.9, 23.7]);
 console.log(rect1.intersectionArea(rect2));
 console.log(rect2.intersectionArea(rect1));
+
+function intersectionArea(rect1, rect2) {
+	const cx = findPointInCommon(rect1.x, rect2.x);
+	const cy = findPointInCommon(rect1.y, rect2.y);
+	return new RectClass(cx, cy).area();
+}
+
+console.log(intersectionArea(rect1, rect2));
