@@ -1,4 +1,4 @@
-type N = [value: number, left?: N, right?: N];
+type N = [value: number, left?: N | null, right?: N | null];
 
 export const n1: N = [1, [2, null, [4]], [3, [5]]];
 export const n2: N = [
