@@ -9,12 +9,41 @@ export const n2: N = [
 
 export function sumBinaryTree(rootNode: N) {
 	let [value, ...rest] = rootNode;
-	const cleared = rest.filter((n) => n);
-	while (cleared.length) {
-		value += sumBinaryTree(cleared.shift());
+	const nodes = rest.filter((n) => n);
+	while (nodes.length) {
+		value += sumBinaryTree(nodes.shift());
 	}
 	return value;
 }
 
 console.log(sumBinaryTree(n1));
 console.log(sumBinaryTree(n2));
+console.log(n1);
+console.log(n2);
+
+type Node = {
+	value: number;
+	left?: Node;
+	right?: Node;
+};
+
+export const sum = (root: Node = null): number => {
+	if (root === null) return 0;
+	return root.value + sum(root.left) + sum(root.right);
+};
+
+const root: Node = {
+	value: 2,
+	left: {
+		value: 3,
+		left: { value: 4 },
+	},
+	right: {
+		value: 6,
+		right: {
+			value: 7,
+		},
+	},
+};
+
+console.log(sum(root));
