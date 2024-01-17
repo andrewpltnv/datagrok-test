@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "biomejs.biome",
+        "usernamehw.errorlens",
+        "k--kato.intellij-idea-keybindings",
+        "visualstudioexptteam.intellicode-api-usage-examples",
+        "better-ts-errors.better-ts-errors",
+        "wallabyjs.quokka-vscode",
+        "xabikos.javascriptsnippets"
+    ]
+}
