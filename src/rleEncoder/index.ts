@@ -1,6 +1,6 @@
-const str = "ATTTGC";
+export const inputStr = "ATTTGC";
 
-function rle([...input]: string) {
+export function rle([...input]: string) {
 	let buffer: [string, number] = [input.shift(), 1];
 	let zip = "";
 	for (const char of input) {
@@ -15,5 +15,7 @@ function rle([...input]: string) {
 	return zip;
 }
 
-const x = rle(str);
+const x = rle(inputStr);
 console.log({ x });
+
+// TODO maybe make an Encoder as class
