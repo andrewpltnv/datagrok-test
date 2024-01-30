@@ -1,10 +1,10 @@
 const arr = [2, 1, 3, 4, 5, 6, 4];
 
-export function findDuplicate([...values]: number[]) {
-	while (values.length > 1) {
-		const element = values.pop();
-		if (values.indexOf(element) !== -1) return element;
+export function findDuplicate(values: number[]) {
+	for (let i = 0; i < values.length; i++) {
+		console.count();
+		if (values.includes(values[i], i + 1)) return values[i];
 	}
 }
 
-findDuplicate(arr);
+console.log(findDuplicate(arr));
